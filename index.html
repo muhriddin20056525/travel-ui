@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TRAVEL UI</title>
+
+    <!-- ========================= BOX ICON CDN ========================= -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- ========================= CSS ========================= -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -25,12 +31,48 @@
               <li><a href="#" class="header-link">Стоимость</a></li>
               <li><a href="#" class="header-link">Блог</a></li>
               <li><a href="#" class="header-link">Контакты</a></li>
+              <button>
+                <i class="bx bx-x"></i>
+              </button>
             </ul>
 
             <button class="btn">Консультация</button>
           </nav>
+
+          <button>
+            <i class="bx bx-menu"></i>
+          </button>
         </header>
+
+        <div class="hero-content">
+          <h1>Насладись прогулкой в горах с командой единомышленников</h1>
+          <form class="hero-form">
+            <div class="hero-form-item">
+              <select>
+                <option value="variant-1">Локация для тура</option>
+              </select>
+              <p>выберите из списка</p>
+            </div>
+
+            <div class="hero-form-item">
+              <input type="date" />
+              <p>укажите диапазон</p>
+            </div>
+
+            <div class="hero-form-item">
+              <select>
+                <option value="variant-1">Участники</option>
+              </select>
+              <p>минимум 4 человека</p>
+            </div>
+
+            <button class="btn">Найти программу</button>
+          </form>
+        </div>
       </div>
     </section>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
   </body>
 </html>
