@@ -38,12 +38,27 @@ img {
   color: var(--white-color);
 }
 
+.section-subtitle {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 83%;
+  color: var(--orange-color);
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: var(--black-color);
+}
+
 /* ================================= HERO ================================= */
 
 .hero {
   width: 100%;
   min-height: 985px;
   background: url("../images/hero-img.png") no-repeat;
+  background-position: center;
 }
 
 header {
@@ -116,17 +131,25 @@ header button i {
   letter-spacing: 0.02em;
   color: var(--white-color);
   max-width: 795px;
+  width: 100%;
   margin-bottom: 4.1rem;
 }
 
 .hero-form {
+  display: flex;
   width: 100%;
   padding: 4rem 4.3rem;
   background: rgba(255, 255, 255, 0.3);
+  gap: 1rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-form-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .hero-form-item select,
@@ -152,17 +175,73 @@ header button i {
   margin-top: 0.8rem;
 }
 
-.hero-form button {
+.hero-form button,
+.hero-content > button {
   border-radius: 0.4rem;
-  padding: 1.6rem 3.6rem;
+  width: 213px;
+  height: 52px;
   color: var(--green-color);
   background-color: var(--white-color);
-  transform: translateY(-15px);
+}
+
+.hero-content > button {
+  display: none;
+}
+
+/* ================================= ABOUT ================================= */
+
+.about {
+  margin-block: 5rem;
+}
+
+.about.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+  min-height: 530px;
+}
+
+.about-img img {
+  position: absolute;
+}
+
+.about-img img:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.about-img img:nth-child(2) {
+  top: 13rem;
+  left: 13rem;
+}
+
+.about-info .section-subtitle {
+  margin-bottom: 0.8rem;
+}
+
+.about-info .section-title {
+  margin-bottom: 4rem;
+}
+
+.about-text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--black-color);
+  margin-bottom: 4rem;
+}
+
+.about-info .btn {
+  padding: 1.6rem 3.6rem;
+  border-radius: 0.4rem;
 }
 
 /* ================================= RESPONSIVE ================================= */
 
 @media (max-width: 992px) {
+  /* ================================= NAVBAR ================================= */
+
   .header-nav button {
     display: none;
   }
@@ -194,5 +273,43 @@ header button i {
 
   header > button {
     display: block;
+  }
+
+  /* ================================= HERO CONTENT ================================= */
+
+  .hero-content {
+    font-size: 3rem;
+    word-wrap: break-word;
+  }
+
+  .hero-form {
+    display: none;
+  }
+
+  .hero-content > button {
+    display: block;
+  }
+
+  /* ================================= ABOUT ================================= */
+
+  .about.container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    order: 2;
+  }
+
+  .about-img img:nth-child(1) {
+    display: none;
+  }
+
+  .about-img img:nth-child(2) {
+    position: static;
+  }
+
+  .about-info {
+    margin-bottom: 5rem;
+    order: 1;
   }
 }
